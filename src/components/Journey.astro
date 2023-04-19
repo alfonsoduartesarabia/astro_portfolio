@@ -1,0 +1,22 @@
+---
+import site from '../data/site.json';
+const {journey} = site;
+---
+
+<html lang="eng">
+    <section id="Journey">
+            <!-- <div class="journey" > -->
+                {Object.keys(journey).reverse().map((year,i) => (
+                    <div class="timeline">
+                        <strong class="title" style="color:aqua">{year}</strong>
+                       {journey[year].map(item => (
+                        <div class="timeline-item">
+                            <strong class="text-stone-400">{item.title}</strong>
+                            <div class="text-stone-400">{item.description}</div>
+                        </div>
+                       ))}
+                    </div>
+                ))}
+            <!-- </div> -->
+    </section>
+</html>

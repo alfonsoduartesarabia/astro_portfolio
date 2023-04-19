@@ -1,0 +1,66 @@
+---
+import { SITE_TITLE } from '../config';
+import site from "../data/site.json";
+const {socials, contacts, skills} = site;
+import SkillsItem from '../components/SkillsItem.astro';
+// import Journey from '../components/Journey.astro';
+---
+<main class="">
+			
+    <div class="flex flex-row space-x-4 mx-auto py-12 container">
+        <div class="font-mono">
+            <div class="p-8">
+                <h2 class="font-extrabold text-teal-400 underline deocoration-indigo-500 text-2xl">{SITE_TITLE}</h2>
+                <h1 class="text-stone-400">I am a software developer and recent graduate</h1>
+            </div>
+            <div class="p-8 w-full text-stone-400">
+                <p>I'm a Mexican citizen 🇲🇽 that used to live in the US 🇺🇸. 
+                Currently back in my home country.
+                I am a novice front-end developer and hope to become a data analyst. I have experience primarily
+                with JS, React, Java, C, and Python. </p>
+            </div>
+        </div>
+        <!-- basis-full for image  -->  
+        <div class="pt-24">
+            <img class="animate-zoom-in-slow rounded-full border border-dotted scale-150" src='/assets/alfonso2.png'  />
+            <div id="socials" class="socials flex justify-center content-center pt-8">
+                
+                <div class="text-stone-400 pt-3">
+                    <a href={`mailto:${contacts[1].contact}`} class="" >
+                    <span 
+                    class="material-icons m-1 p-1 text-teal-400 hover:bg-teal-400 hover:text-white rounded-full transition-colors duration-300">
+                        {contacts[1].icon}</span></a>
+                </div > 
+                {socials.map((social) => (
+                    <div class="social-icon text-2xl pt-4">
+                        <a href={social.link} class="m-2 p-1 text-teal-400 hover:bg-teal-400 hover:text-white rounded-full transition-colors duration-300">
+                            <i class={`devicon-${social.icon}-plain`}></i></a>
+                    </div>
+                ) ) }
+            </div>
+        </div>
+        <!-- <div class="grid pl-12">
+            {skills.comfortable.map( (i) => (<SkillsItem item={i} />) )}
+            {skills.mastering.map( (i) => (<SkillsItem item={i} />) )}
+        </div> -->
+        
+        <!-- <div class="">
+            {skills.mastering.map( (i) => (<SkillsItem item={i} />) )}
+        </div> -->
+
+    </div>
+    <div class="flex pl-12">
+        {skills.comfortable.map( (i) => (<SkillsItem item={i} />) )}
+        {skills.mastering.map( (i) => (<SkillsItem item={i} />) )}
+    </div>
+    <style lang="scss">
+        #socials {
+            @media (min-width: 700px) {
+                    grid-template-columns: repeat(12, 1fr);
+            }
+            @media (min-width: 600px) {
+                grid-template-columns: repeat(8, 1fr);
+            }
+        }
+    </style>
+</main>

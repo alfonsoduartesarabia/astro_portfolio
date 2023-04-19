@@ -1,0 +1,89 @@
+{
+    "title": "Alfonso Duarte | Novice Developer",
+    "description": "Alfonso Duarte - Portfolio, Developer",
+    "url": "",
+    "author": "Alfonso Duarte Sarabia",
+    "profile_pic": "/assets/alfonsopfp.jpg",
+    "resume": "/assets/ResumeAlternative5.pdf",
+    "skills": {
+        "comfortable": [
+            {"name": "HTML5", "icon": "html5"},
+            {"name": "CSS3", "icon": "css3"},
+            {"name": "JavaScript", "icon": "javascript"},
+            {"name": "Node.js", "icon": "nodejs"},
+            {"name": "Git", "icon": "git"},
+            {"name": "MySQL", "icon": "mysql"},
+            {"name": "C", "icon": "c"},
+            {"name": "Java", "icon": "java"}
+        ],
+        "mastering": [
+            {"name": "Tailwind", "icon": "tailwindcss"},
+            {"name": "React", "icon": "react"},
+            {"name": "Python", "icon": "python"}
+        ]
+    },
+    "journey": {
+        "2023": [
+            {
+                "title": "Computer Science Graduate",
+                "description": "It's my dream to become a senior front end developer and/or become a data archivist"
+            }
+        ],
+        "2021": [
+            {
+                "title": "Computer Science Graduate 🌉 🎓",
+                "description": "I graduated with a Bachelor of Science in Computer Science from San Francisco State University"
+            }
+        ],
+        "2016": [
+            {
+                "title": "Graduated from Hayward High School 🤯",
+                "description": "Graduated high school and was now needed to decide what career I would go for in college"
+            },
+            {
+                "title": "Started attending Ohlone College",
+                "description": "I decided that I would go for Computer Science with no prior knowledge or experience. I thought it would be a fun career to do."
+            }, 
+            {
+                "title": "Got my first job at KFC",
+                "description": "Started my first job in the fast food industry as a cahsier."
+            }
+        ],
+        "2005": [
+            {
+                "title": "Moved to the US 🇺🇸",
+                "description": "I moved to the US when I was very little. It was very difficult for me since I needed to learn a whole language"
+            }
+        ],
+        "1997": [
+            {
+                "title": "I was born 👶",
+                "description": "I was born in Mexicali, Mexico 🇲🇽. This is where it all started."
+            }
+        ]
+    },
+    "socials": [
+        {
+            "link": "https://github.com/alfonsoduartesarabia",
+            "title": "GitHub",
+            "icon": "github"
+        }, 
+        {
+            "link": "https://www.linkedin.com/in/alfonso-duarte-sarabia-2a9b81122/",
+            "title": "Linkedin",
+            "icon": "linkedin"
+        }
+    ],
+    "contacts" : [
+        {
+            "contact" : "+52 686 338 1273",
+            "title" : "phone number",
+            "icon" : "local_phone"
+        }, 
+        {
+            "contact" : "alfonsoduarte97@gmail.com",
+            "title" : "email",
+            "icon" : "email"
+        }
+    ]
+}

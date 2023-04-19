@@ -1,0 +1,57 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+// import Footer from '../components/Footer.astro';
+import SkillsItem from '../components/SkillsItem.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import site from '../data/site.json';
+const {skills} = site;
+
+const title = `These are the skills I've mastered over the years`;
+const comfortable = `Skills I'm comfortable/experienced with`;
+const mastering = `Skills I'm mastering`;
+---
+
+<html lang="eng">
+    <head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+
+    <body>
+        <Header />
+        <main class="pt-36">
+            <!-- <h2 style="color:aqua">{title}</h2> -->
+            <br />
+            <!-- 
+                Looping through all the skills I have listed on the json file
+             -->
+            <strong class="text-teal-400">{comfortable}</strong>
+            <br />
+             <div class="skills">
+                {skills.comfortable.map((item) => (<SkillsItem item={item} />))}
+             </div>
+
+             <strong class="text-teal-400">{mastering}</strong>
+             <br />
+             <div class="skills">
+                {skills.mastering.map((item) => (<SkillsItem item={item} />))}
+             </div>
+
+        </main>
+        <!-- <Footer /> -->
+    </body>
+
+    <style lang="scss">
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            margin: 1rem 0;
+            @media (min-width: 700px) {
+                    grid-template-columns: repeat(12, 1fr);
+            }
+            @media (min-width: 600px) {
+                grid-template-columns: repeat(8, 1fr);
+            }
+        }
+    </style>
+</html>

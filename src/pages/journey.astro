@@ -1,0 +1,32 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+// import Footer from '../components/Footer.astro';
+import site from '../data/site.json';
+const {journey} = site;
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+
+<html lang="eng">
+    <head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+
+    <body class="mt-3">
+        <Header />
+        <div id="journey" class="font-mono">
+                    {Object.keys(journey).reverse().map((year,i) => (
+                        <div class="timeline">
+                            <strong class="text-teal-400">{year}</strong>
+                        {journey[year].map(item => (
+                            <div class="timeline-item">
+                                <strong class="text-stone-100">{item.title}</strong>
+                                <div class="text-stone-400">{item.description}</div>
+                            </div>
+                        ))}
+                        </div>
+                    ))}
+        </div>
+        <!-- <Footer /> -->
+    </body>
+</html>
