@@ -1,0 +1,63 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+<html lang="eng">
+    <head id="header">
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+        <!-- <script is:inline src="https://cjrtnc.leaningtech.com/2.3/loader.js"></script> -->
+    </head>
+        <body class="m-auto">
+            <Header />
+        <div id="info-game" class="">
+            <h1 class="text-teal-400 font-extra-bold text-2xl">Tank Wars</h1>
+            <p class="text-stone-400 pb-32 text-md">
+                    This is a tank game that I coded as a final project for SFSU's Software Development class (CSC 413).
+                    We were given the barebone structure of the game. I expanded upon it adding sound, more intelligent AI, 
+                    explosions, health, etc. The project was coded with Java but in order to export the project into the 
+                    web I used CheerpJ. CheerpJ converts Java code into JavaScript so it can run natively on browsers.
+                    Currently CheerpJ is only for Java 8 applications and there is some perfomance issues with my project.
+                    When two bullets hit the tank at the same time, the program tends to crash.
+            </p>
+            <button id="startGame" class="material-icons-round mx-96 h-24 w-24 text-3xl text-teal-400 hover:bg-teal-400 hover:text-white rounded-full transition-colors duration-300">
+                start
+            </button>
+        </div>
+
+        <script>
+            let btn = document.getElementById("startGame");
+
+            btn.onclick = () => {       
+                document.getElementById("info-game").style.display = "none";
+                
+                let scriptFile = document.createElement("script");
+                scriptFile.setAttribute("src","https://cjrtnc.leaningtech.com/2.3/loader.js");
+                scriptFile.setAttribute("type","text/javascript");
+                scriptFile.setAttribute("async","true");
+                document.getElementById("header").appendChild(scriptFile);
+                // document.getElementById("header").style["margin"] = "100%";
+
+                scriptFile.addEventListener("load", () => {
+                    console.log("File loaded");
+                    cheerpjInit();
+                    cheerpjCreateDisplay(1024,768);
+                    cheerpjRunJar("/app/assets/TankGame.jar");
+
+                });
+                // error event
+                scriptFile.addEventListener("error", (ev) => {
+                    console.log("Error on loading file", ev);
+                });
+            };
+            window.onclick = (e) => {
+            }
+        </script>
+
+        <!-- <script>
+            cheerpjInit();
+            cheerpjCreateDisplay(800,600);
+            cheerpjRunJar("/app/assets/TankGame.jar"); 
+        </script> -->
+        </body>
+</html>

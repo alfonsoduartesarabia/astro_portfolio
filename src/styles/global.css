@@ -5,17 +5,36 @@
  */
  @import 'material-icons/iconfont/material-icons.css';
 body {
+	/* margin: auto; */
+	/* display: block; */
+	/* display: inline-block; */
+	/* margin-left: 50%; */
+	/* transform: translateX(25%); */
+	/* -ms-transform: translateX(-50%); */
+
+	max-width: 62%;
+	background-color: #171e38;
+	padding: 20px;
+	color: #444;
+	text-align: left;
+	font-family: Verdana, sans-serif;
+	line-height: 1.5;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+
+	/* display: block;
 	font-family: Verdana, sans-serif;
 	margin: auto;
 	padding: 20px;
-	/* max-width: 65ch; */
 	max-width: 62%;
 	text-align: left;
 	background-color: #171e38;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
-	color: #444;
+	color: #444; */
+
+	/* max-width: 65ch; */
 }
 h1,
 h2,

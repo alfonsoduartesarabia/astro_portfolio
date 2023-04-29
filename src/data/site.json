@@ -4,7 +4,7 @@
     "url": "",
     "author": "Alfonso Duarte Sarabia",
     "profile_pic": "/assets/alfonsopfp.jpg",
-    "resume": "/assets/ResumeAlternative5.pdf",
+    "resume": "/assets/ResumeAlfonso.pdf",
     "skills": {
         "comfortable": [
             {"name": "HTML5", "icon": "html5"},
@@ -25,7 +25,7 @@
     "journey": {
         "2023": [
             {
-                "title": "Computer Science Graduate",
+                "title": "Career Journey and Dreams",
                 "description": "It's my dream to become a senior front end developer and/or become a data archivist"
             }
         ],

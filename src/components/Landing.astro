@@ -1,11 +1,11 @@
 ---
 import { SITE_TITLE } from '../config';
 import site from "../data/site.json";
-const {socials, contacts, skills} = site;
+const {socials, contacts, skills, resume} = site;
 import SkillsItem from '../components/SkillsItem.astro';
 // import Journey from '../components/Journey.astro';
 ---
-<main class="">
+<!-- <main class=""> -->
 			
     <div class="flex flex-row space-x-4 mx-auto py-12 container">
         <div class="font-mono">
@@ -37,6 +37,12 @@ import SkillsItem from '../components/SkillsItem.astro';
                             <i class={`devicon-${social.icon}-plain`}></i></a>
                     </div>
                 ) ) }
+                <!-- Download Resume -->
+                <div class="text-stone-400 pt-3">
+                    <a href={resume} download class="">
+                        <span class="material-icons-round m-1 p-1 text-teal-400 hover:bg-teal-400 hover:text-white rounded-full transition-colors duration-300">download</span>
+                    </a>
+                </div>
             </div>
         </div>
         <!-- <div class="grid pl-12">
@@ -63,4 +69,4 @@ import SkillsItem from '../components/SkillsItem.astro';
             }
         }
     </style>
-</main>
+<!-- </main> -->
