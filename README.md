@@ -2,7 +2,7 @@
 
 Built my portfolio website with Astro for the first time. 
 
-![screenshot](/astro_portfolio//public//assets//portfolioscreenshot.png)
+![screenshot](/public/assets/portfolioscreenshot.png)
 
 ## 📚 Stack
 - Platform : [Astro](https://astro.build/)
