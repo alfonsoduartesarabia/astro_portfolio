@@ -1,25 +1,14 @@
-# Astro Starter Kit: Blog
+# Personal website / portfolio
 
-```
-npm create astro@latest -- --template blog
-```
+Built my portfolio website with Astro for the first time. 
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/blog)
+![screenshot](/astro_portfolio//public//assets//portfolioscreenshot.png)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-
-![blog](https://user-images.githubusercontent.com/4677417/186189140-4ef17aac-c3c9-4918-a8c2-ce86ba1bb394.png)
-
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+## 📚 Stack
+- Platform : [Astro](https://astro.build/)
+- Deployment: [Cloudfare](https://www.cloudflare.com/)
+- Packet Manager: [npm](https://www.npmjs.com/)
+- CSS : [Tailwind CSS](https://tailwindcss.com/)
 
 ## 🚀 Project Structure
 
@@ -27,10 +16,13 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ```
 ├── public/
+│   ├── assets/
 ├── src/
 │   ├── components/
+│   ├── data/
 │   ├── layouts/
-│   └── pages/
+│   ├── pages/
+│   └── styles/
 ├── astro.config.mjs
 ├── README.md
 ├── package.json
@@ -45,8 +37,6 @@ Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
-
 | Command                | Action                                           |
 | :--------------------- | :----------------------------------------------- |
 | `npm install`          | Installs dependencies                            |
@@ -56,10 +46,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📝 License
 
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+This project is licensed under the [MIT license](/LICENSE).

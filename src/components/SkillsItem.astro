@@ -1,13 +1,13 @@
 ---
 const { item } = Astro.props;
 ---
-<div class="skills-item tooltip-container">
+<div class="skills-item tooltip-container border-2 text-teal-400 border-solid border-teal-400">
     <span class="tooltip">{item.name}</span>
     <i class={`devicon-${item.icon}-${(item.type?item.type:'plain')}`}></i>
 </div>
 <style lang="scss">
 .skills-item {
-    background: #fff;
+    // background: #fff;
     padding: 3px;
     margin: 6px;
     border-radius: 5px;
