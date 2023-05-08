@@ -8,24 +8,24 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
         <!-- <script is:inline src="https://cjrtnc.leaningtech.com/2.3/loader.js"></script> -->
     </head>
-        <body class="m-auto font-mono">
+        <body class="m-auto font-mono lg:max-w-4xl md:text-3xl lg:text-base">
             <Header />
         <div id="info-game" class="">
-            <h1 class="text-teal-400 font-extra-bold text-2xl">Tank Wars</h1>
+            <h1 class="text-teal-400 font-extra-bold ">Tank Wars</h1>
             <p class="text-stone-400 text-md">
                     This is a tank game that I coded as a final project for SFSU's Software Development class (CSC 413).
                     We were given the barebone structure of the game. I expanded upon it adding sound, more intelligent AI, 
-                    explosions, health, etc. The project was coded with Java but in order to export the project into the 
+                    explosions, health, etc. The project was coded in Java but in order to export the project into the 
                     web I used CheerpJ. CheerpJ converts Java code into JavaScript so it can run natively on browsers.
                     Currently CheerpJ is only for Java 8 applications.
                     <!-- <br /> -->
             </p>
-            <div class="pb-32 text-stone-400">
+            <div class="pb-12 md:pb-32 text-stone-400">
                 THERE IS PERFOMANCE ISSUES WITH THE PROGRAM. RUNS VERY SLOW & CONSTANTLY CRASHES.
                 YOU CAN <a class="text-rose-700 underline decoration-solid" href="/assets/TankGame.jar" download>DOWNLOAD</a>
                 THE JAR FILE AND PLAY YOURSELF USING JAVA FOR OPTIMAL EXPERIENCE
             </div>
-            <button id="startGame" class="material-icons-round mx-96 h-24 w-24 text-3xl text-teal-400 hover:bg-teal-400 hover:text-white rounded-full transition-colors duration-300">
+            <button id="startGame" class="material-icons-round mx-32 md:mx-80 lg:mx-96 lg:h-24 w-24 lg:text-4xl md:text-5xl text-teal-400 hover:bg-teal-400 hover:text-white rounded-full transition-colors duration-300">
                 start
             </button>
         </div>

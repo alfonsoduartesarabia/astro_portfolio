@@ -3,25 +3,27 @@ import { SITE_TITLE } from '../config';
 import site from "../data/site.json";
 const {socials, contacts, skills, resume} = site;
 import SkillsItem from '../components/SkillsItem.astro';
-// import Journey from '../components/Journey.astro';
 ---			
-    <div class="flex flex-row space-x-4 mx-auto py-12 container">
-        <div class="font-mono">
-            <div class="p-8">
-                <h2 class="font-extrabold text-teal-400 underline deocoration-indigo-500 text-2xl">{SITE_TITLE}</h2>
+    <div class="flex flex-col-reverse lg:flex-row space-x-4 mx-auto lg:py-12 container">
+        <div class="font-mono p-3 md:p-24 lg:p-8">
+            <!-- <div class="p-8"> -->
+                <h2 class="font-extrabold text-teal-400 underline deocoration-indigo-500 text-2xl xl:text-3xl">{SITE_TITLE}</h2>
                 <h1 class="text-stone-400">I am a software developer and recent graduate</h1>
-            </div>
-            <div class="p-8 w-full text-stone-400">
-                <p>I'm a Mexican citizen 🇲🇽 that used to live in the US 🇺🇸. 
-                Currently back in my home country.
-                I am a novice front-end developer and hope to become a data analyst or . I have experience primarily
-                with JS, React, Java, C, and Python. </p>
-            </div>
+                <!-- <br /> -->
+                <!-- <div class="p-8 w-full text-stone-400"> -->
+                    <p class="pt-12 w-full text-stone-400">I'm a Mexican citizen 🇲🇽 that used to live in the US 🇺🇸. 
+                    Currently back in my home country.
+                    I am a novice front-end developer and hope to become a data analyst or data archivist. 
+                    I have experience primarily
+                    with JS, React, Java, C, and Python. </p>
+                <!-- </div> -->
+            <!-- </div> -->
         </div>
-        <!-- basis-full for image  -->  
-        <div class="pt-24">
-            <img class="animate-zoom-in-slow rounded-full border border-dotted scale-150" src='/assets/alfonso2.png'  />
-            <div id="socials" class="socials flex justify-center content-center pt-8">
+
+        <div class="md:pr-2 lg:pr-0 md:pt-18 text-2xl">
+            <img class="animate-zoom-in-slow rounded-full border border-dotted md:scale-90 lg:scale-150 lg:mt-12 lg:ml-0 md:ml-24" 
+            src='/assets/alfonso2.png'  />
+            <div id="socials" class="socials flex justify-center content-center md:pt-8">
                 
                 <div class="text-stone-400 pt-3">
                     <a href={`mailto:${contacts[1].contact}`} class="" >
@@ -30,7 +32,7 @@ import SkillsItem from '../components/SkillsItem.astro';
                         {contacts[1].icon}</span></a>
                 </div > 
                 {socials.map((social) => (
-                    <div class="social-icon text-2xl pt-4">
+                    <div class="social-icon lg:text-2xl pt-4">
                         <a href={social.link} class="m-2 p-1 text-teal-400 hover:bg-teal-400 hover:text-white rounded-full transition-colors duration-300" target="_blank">
                             <i class={`devicon-${social.icon}-plain`}></i></a>
                     </div>
@@ -53,8 +55,8 @@ import SkillsItem from '../components/SkillsItem.astro';
         </div> -->
 
     </div>
-    <div class="flex pl-12">
-        {skills.comfortable.map( (i) => (<SkillsItem item={i} />) )}
+    <div class="grid grid-cols-3 md:flex md:flex-row lg:max-w-full md:pl-24 lg:pl-0">
+        {skills.comfortable.map( (i) => (<SkillsItem item={i} />) )}   
         {skills.mastering.map( (i) => (<SkillsItem item={i} />) )}
     </div>
     <style lang="scss">

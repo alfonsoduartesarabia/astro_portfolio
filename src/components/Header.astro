@@ -2,23 +2,30 @@
 import HeaderLink from './HeaderLink.astro';
 ---
 
-<header class="relative">
+<header class="relative mx-auto lg:max-w-4xl md:max-w-2xl">
 	<!-- <img src="/assets/glassesheader2.png"  
 			class="absolute top-0 right-0 w-12 h-12 text-violet-400 hover:bg-teal-200 hover:text-white rounded-full"/> -->
 	<nav>
-		<div class="mt-3 font-mono">
-			<HeaderLink href="/">
-				<img src="/assets/home.png"  
-				class="m-1 p-1 h-12 w-12 hover:bg-gray-50 hover:text-white rounded-lg transition-colors duration-300"/>
-			</HeaderLink>	
-			<HeaderLink href="/journey">
-				<img src='/assets/journeypath2.png'
-					class="h-12 w-12 m-1 p-1 hover:bg-gray-50 hover:text-white rounded-lg transition-colors duration-300" />
-			</HeaderLink>
-			<HeaderLink href="/tankgame">
+		<div class="md:ml-18 lg:mt-0 mt-3 md:flex gap-3 md:flex-row flex flex-row font-mono">
+			<div>
+				<HeaderLink href="/">
+					<img src="/assets/home.png"  
+					class=" m-1 p-1 h-12 w-12 hover:bg-gray-50 hover:text-white rounded-lg transition-colors duration-300"/>
+				</HeaderLink>
+			</div>	
+			<div>
+				<HeaderLink href="/journey">
+					<img src='/assets/journeypath2.png'
+						class="h-12 w-12 m-1 p-1 hover:bg-gray-50 hover:text-white rounded-lg transition-colors duration-300" />
+				</HeaderLink>
+			</div>
+			<div>
+				<HeaderLink href="/tankgame">
 					<img src='/assets/tank5.png'
 					class="h-12 w-12 m-1 p-1 hover:bg-gray-50 hover:text-white rounded-lg transition-colors duration-300" />
-			</HeaderLink>
+				</HeaderLink>
+			</div>
+
 		</div>
 		<!-- Redirects to home page (landing page) -->
 		<!-- <HeaderLink href="/">

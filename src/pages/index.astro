@@ -12,7 +12,8 @@ import Landing from '../components/Landing.astro';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="min-h-screen w-screen flex flex-col overflow-x-hidden m-auto">
+	<!-- Deleted md:flex md:flex-col from body class -->
+	<body class="md:max-w-7xl lg:max-w-4xl min-h-screen w-screen overflow-x-hidden md:mx-auto">
 		<Header title={SITE_TITLE} />
 		<Landing />
 		<!-- <Footer /> -->
